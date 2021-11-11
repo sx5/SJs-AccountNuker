@@ -36,7 +36,7 @@ token = input(
                                                            
 	
 \033[91m
-                         SJ Runs All
+               SJ Runs All \\ remade by exotic
                               涙 を 流 す"""
     "\033[91m\n\n                  +-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+\n                   E n t e r   T o k e n   B e l o w\n                  +-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+\n                  Token:\033[00m"
 )
@@ -188,8 +188,14 @@ def leaver():
                 print(f"CAN'T DELETE [{guild.name}]")
 
         print('\n')
-        print('[[LEAVING DONE, IF YOU WANNA USE THE TOOL AGAIN RESTART IT]')
+        opt = input('[[LEAVING DONE, 1. RE-USE \\ 2.EXIT] -> ')
         print('\n')
+	if opt == "1":
+		nuke()
+	elif opt == "2":
+		exit(0)
+	else:
+		input("INVALID OPTION !")
 
     bot.run(token, bot=False)
 
@@ -209,9 +215,14 @@ def spamservers():
 
         print('max server limit is [100]')
         print('\n')
-        print('[[SPAMMING DONE, IF YOU WANNA USE THE TOOL AGAIN RESTART IT]')
+        opt2 = input('[[SPAMMING DONE, 1. RE-USE \\ 2.EXIT] -> ')
         print('\n')
-        input()
+        if opt2 == "1":
+		spamservers()
+	elif opt2 == "2":
+		exit(0)
+	else:
+		input("INVALID OPTION !")
 
     bot.run(token, bot=False)
 
